@@ -1,0 +1,4 @@
+<additional>
+    <inductionLoop id="det_N" lane="N_to_J1_0" pos="450" freq="900" file="detector_output.xml"/>
+    <inductionLoop id="det_E" lane="E_to_J1_0" pos="450" freq="900" file="detector_output.xml"/>
+</additional>

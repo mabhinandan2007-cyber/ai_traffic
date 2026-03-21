@@ -1,0 +1,18 @@
+<routes>
+    <vType id="car" accel="2.6" decel="4.5" length="5" maxSpeed="20" sigma="0.5" />
+    <vType id="emergency" accel="3.5" decel="5.0" length="7" maxSpeed="30" sigma="0.2" color="red" vClass="emergency">
+        <param key="has.bluelight.device" value="true"/>
+    </vType>
+
+    <flow id="flow_NS" type="car" begin="0" end="1000" number="150" from="N_to_J1" to="J1_to_S" />
+    <flow id="flow_SN" type="car" begin="0" end="1000" number="150" from="S_to_J1" to="J1_to_N" />
+    <flow id="flow_EW" type="car" begin="0" end="1000" number="150" from="E_to_J1" to="J1_to_W" />
+    <flow id="flow_WE" type="car" begin="0" end="1000" number="150" from="W_to_J1" to="J1_to_E" />
+    <flow id="flow_NE" type="car" begin="0" end="1000" number="50" from="N_to_J1" to="J1_to_E" />
+    <flow id="flow_SW" type="car" begin="0" end="1000" number="50" from="S_to_J1" to="J1_to_W" />
+
+    <vehicle id="ambulance" type="emergency" depart="60" departLane="first">
+        <route edges="N_to_J1 J1_to_S"/>
+    </vehicle>
+</routes>
+
